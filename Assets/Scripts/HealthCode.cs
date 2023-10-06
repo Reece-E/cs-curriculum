@@ -11,7 +11,7 @@ public class HealthCode : MonoBehaviour
     private float iframesTimer;
     private float iframesTimerDefault = 1.5f;
     private bool iframes = false;
-    private int health = 10;
+    public int health = 10;
 
     private Coin coinpurse;
     // Start is called before the first frame update
@@ -67,5 +67,14 @@ public class HealthCode : MonoBehaviour
         health += amount;
         Debug.Log("Health: "+health);
 
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Potion"))
+        {
+            ChangeHealth(1);
+            Destroy(other.gameObject);
+
+        }
     }
 }

@@ -10,6 +10,7 @@ public class PlayerMovementOverworld : MonoBehaviour
     private float XVector;
     private float YVector;
     private float YDirection;
+    public bool Overworld;
     void Start()
     {
         WalkingSpeed = 4f;
@@ -18,12 +19,19 @@ public class PlayerMovementOverworld : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        XDirection = Input.GetAxis("Horizontal");
+        if (Overworld)
+        {
+            XDirection = Input.GetAxis("Horizontal");
+            XVector = XDirection * WalkingSpeed * Time.deltaTime;
+            transform.position = transform.position + new Vector3(XVector, 0, 0);
+
+            YDirection = Input.GetAxis("Vertical");
+            YVector = YDirection * WalkingSpeed * Time.deltaTime;
+            transform.position = transform.position + new Vector3(0, YVector, 0);
+        }
+        else 
+            XDirection = Input.GetAxis("Horizontal");
         XVector = XDirection * WalkingSpeed * Time.deltaTime;
         transform.position = transform.position + new Vector3(XVector, 0, 0);
-        
-        YDirection = Input.GetAxis("Vertical");
-        YVector = YDirection * WalkingSpeed * Time.deltaTime;
-        transform.position = transform.position + new Vector3(0,YVector, 0);
     }
 }
