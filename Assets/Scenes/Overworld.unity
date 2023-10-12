@@ -269,12 +269,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1849765336}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &218239957 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5790822057519619805, guid: d181d0f6b0e116b4298e1e64b89f707e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1859814483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &224400862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -946,21 +940,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &446271511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446271505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca56d30384964a6ead0888b474ca8ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1750497384}
-  turretprojectile: {fileID: 218239957}
-  initialtime: 3.5
 --- !u!58 &446271512
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40098,7 +40077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1 &703228634
 GameObject:
   m_ObjectHideFlags: 0
@@ -40336,7 +40315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1 &881978799 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3462362578362087066, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -40433,7 +40412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1001 &1062421786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40524,7 +40503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1001 &1097044985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41194,7 +41173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1 &1350614017
 GameObject:
   m_ObjectHideFlags: 0
@@ -84360,7 +84339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1 &1503104635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3462362578362087066, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -84385,7 +84364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1 &1577315905
 GameObject:
   m_ObjectHideFlags: 0
@@ -85043,10 +85022,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 446271512}
-    - targetCorrespondingSourceObject: {fileID: 6040774585044851471, guid: 54f2fe71921990e48b811a0b3b35835f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 446271511}
   m_SourcePrefab: {fileID: 100100000, guid: 54f2fe71921990e48b811a0b3b35835f, type: 3}
 --- !u!1 &1665360715
 GameObject:
@@ -85341,10 +85316,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1750497389}
-    - targetCorrespondingSourceObject: {fileID: 412193027009803667, guid: 34448014912494d33b041af48acd0291,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1750497394}
   m_SourcePrefab: {fileID: 100100000, guid: 34448014912494d33b041af48acd0291, type: 3}
 --- !u!1 &1750497384 stripped
 GameObject:
@@ -85377,7 +85348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!114 &1750497390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85391,22 +85362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
---- !u!114 &1750497394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750497384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0492796df8d4c4a8683b3bdb534685dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinpurse: {fileID: 1750497389}
-  health: {fileID: 1750497390}
-  coinText: {fileID: 1377441262}
-  HealthText: {fileID: 1577315907}
 --- !u!1 &1799217990
 GameObject:
   m_ObjectHideFlags: 0
@@ -85419,6 +85374,7 @@ GameObject:
   - component: {fileID: 1799217993}
   - component: {fileID: 1799217992}
   - component: {fileID: 1799217991}
+  - component: {fileID: 1799217995}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -85510,6 +85466,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1799217995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799217990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0492796df8d4c4a8683b3bdb534685dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinpurse: {fileID: 1750497389}
+  coinText: {fileID: 1377441262}
+  HealthText: {fileID: 1577315907}
+  coins: 0
+  health: 0
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -85528,7 +85501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1001 &1849765336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86110,7 +86083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!4 &2020212485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -86129,7 +86102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e06d42880b654339a1638f6fb079070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
 --- !u!1001 &2066015542
 PrefabInstance:
   m_ObjectHideFlags: 0
