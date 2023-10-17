@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,40 +7,47 @@ using UnityEngine.UIElements;
 
 public class Turret : MonoBehaviour
 {
-    public GameObject player;
+   
+    [SerializeField] private float scanradius = 3f;
+    [SerializeField] private LayerMask layers;
+    [SerializeField] private Collider2D target;
+    
 
-    public GameObject turretprojectile;
-
-    public float initialtime;
-
-    private float timer;
-    // Start is called before the first frame update
-    void Start()
+    private void OnDrawGizmosSelected()
     {
-        initialtime = timer;
+        Gizmos.DrawWireSphere(transform.position, scanradius);
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void Start()
     {
-        if (other.gameObject.CompareTag("Player"));
+       
+    }
+
+    
+
+    private void CheckEnviorment()
+    {
+        target = Physics2D.OverlapCircle(transform.position, scanradius, layers);
+       
+    }
+    private void LookAtTarget()
+    {
+        if (target != null)
         {
-            timer -= Time.deltaTime;
+            Vector2 direction = target.transform.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg -90f;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < 0);
-        {
-            timer = initialtime;
-            GameObject projectile = Instantiate(turretprojectile, transform.position, Quaternion.identity);
-             Vector3 target = player.transform.position;
-             projectile.transform.Translate(target);
-            
-            
-        }
+        CheckEnviorment();
+        LookAtTarget();
+        
     }
 }

@@ -975,6 +975,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &446271516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446271505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca56d30384964a6ead0888b474ca8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  turretprojectile: {fileID: 0}
+  initialtime: 0
 --- !u!1 &448729532
 GameObject:
   m_ObjectHideFlags: 0
@@ -85022,6 +85037,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 446271512}
+    - targetCorrespondingSourceObject: {fileID: 6040774585044851471, guid: 54f2fe71921990e48b811a0b3b35835f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 446271516}
   m_SourcePrefab: {fileID: 100100000, guid: 54f2fe71921990e48b811a0b3b35835f, type: 3}
 --- !u!1 &1665360715
 GameObject:
@@ -85361,7 +85380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2eaa31d77574c9aa0ae90988da474a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  hud: {fileID: 0}
 --- !u!1 &1799217990
 GameObject:
   m_ObjectHideFlags: 0
@@ -85482,7 +85501,7 @@ MonoBehaviour:
   coinText: {fileID: 1377441262}
   HealthText: {fileID: 1577315907}
   coins: 0
-  health: 0
+  health: 10
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -85587,6 +85606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret_Projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 5790822057519619805, guid: d181d0f6b0e116b4298e1e64b89f707e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7101103389178533185, guid: d181d0f6b0e116b4298e1e64b89f707e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -85600,12 +85624,12 @@ PrefabInstance:
     - target: {fileID: 7101103389178533185, guid: d181d0f6b0e116b4298e1e64b89f707e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.35
+      value: -16.33
       objectReference: {fileID: 0}
     - target: {fileID: 7101103389178533185, guid: d181d0f6b0e116b4298e1e64b89f707e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.91
+      value: 8.94
       objectReference: {fileID: 0}
     - target: {fileID: 7101103389178533185, guid: d181d0f6b0e116b4298e1e64b89f707e,
         type: 3}
