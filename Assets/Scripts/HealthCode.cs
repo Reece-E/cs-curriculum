@@ -52,20 +52,7 @@ public class HealthCode : MonoBehaviour
             }
 
         }
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            if (!iframes)
-            {
-                ChangeHealth(-1);
-                iframes = true;
-            }
-
-            if (hud.health < 1)
-            {
-                Death();
-            }
-
-        }
+        
     }
 
     void Death()
@@ -88,6 +75,21 @@ public class HealthCode : MonoBehaviour
         if (other.gameObject.CompareTag("Potion"))
         {
             ChangeHealth(1);
+            Destroy(other.gameObject);
+
+        }
+        if (other.gameObject.CompareTag("Fireball"))
+        {
+            if (!iframes)
+            {
+                ChangeHealth(-1);
+                iframes = true;
+            }
+
+            if (hud.health < 1)
+            {
+                Death();
+            }
             Destroy(other.gameObject);
 
         }

@@ -1,21 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Fireball : MonoBehaviour
 {
-    private Rigidbody2D _rb;
+public float destroyDelay = 2.0f;
+    
+// Start is called before the first frame update
+void Start()
+{
+    Invoke("DestroyBullet", destroyDelay);
+}
 
-    [SerializeField] private float speed = 2f;
-    // Start is called before the first frame update
-    void Start()
+void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.gameObject.CompareTag("Wall"))
     {
-        _rb = GetComponent<Rigidbody2D>();
+        DestroyBullet();
     }
+        
+}
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        _rb.MovePosition(transform.TransformPoint(Vector3.up * (speed * Time.deltaTime)));
-    }
+public float projectileSpeed;
+// Update is called once per frame
+private void Update()
+{
+        
+    transform.Translate(new Vector2( projectileSpeed*Time.deltaTime,0.0f));
+       
+        
+
+}
+void DestroyBullet()
+{
+    // Destroy the bullet game object
+    Destroy(gameObject);
+}
 }
