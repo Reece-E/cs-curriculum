@@ -107,5 +107,13 @@ public class HealthCode : MonoBehaviour
             Destroy(other.gameObject);
 
         }
+        if (other.gameObject.CompareTag("IPotion"))
+        {
+
+            iframesTimer = 10f;
+            iframes = true;
+            Destroy(other.gameObject);
+
+        }
     }
 }
