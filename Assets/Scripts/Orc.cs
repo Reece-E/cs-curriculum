@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class Orc : MonoBehaviour
   
     
     public bool isInRange;
+    public Transform Orcpos;
     public Transform orctarget;
     public Transform iposition;
     private float health;
@@ -17,15 +19,33 @@ public class Orc : MonoBehaviour
     private float iframesTimerDefault = 1;
     private bool iframes = false;
     private int OrcHealth;
+    public GameObject Coin;
+    private CircleCollider2D collider;
 
-    
-    // Start is called before the first frame update
+// Start is called before the first frame update
     private void Start()
     {
         iframesTimer = iframesTimerDefault;
         OrcHealth = 5;
-
+        collider = gameObject.GetComponent<CircleCollider2D>();
+        collider.radius = 5;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            collider.radius = collider.radius + 2f;
+            isInRange = true;
+
+
+
+
+        }
+    }
+
+ 
+
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -38,6 +58,7 @@ public class Orc : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInRange = false;
+            collider.radius = collider.radius - 2f;
         }
     }
 
@@ -79,6 +100,24 @@ public class Orc : MonoBehaviour
             if (OrcHealth < 1)
             {
                 Destroy(gameObject);
+                Instantiate(Coin,Orcpos.position, Orcpos.rotation);
+            }
+
+
+        }
+        if (collision.gameObject.CompareTag("Fireball"))
+        {
+            if (!iframes)
+            {
+                ChangeOrcHealth(-1);
+                iframes = true;
+                Destroy();
+            }
+
+            if (OrcHealth < 1)
+            {
+                Destroy(gameObject);
+                Instantiate(Coin,Orcpos.position, Orcpos.rotation);
             }
 
 
