@@ -111,7 +111,24 @@ public class Orc : MonoBehaviour
             {
                 ChangeOrcHealth(-1);
                 iframes = true;
-                Destroy();
+                
+            }
+
+            if (OrcHealth < 1)
+            {
+                Destroy(gameObject);
+                Instantiate(Coin,Orcpos.position, Orcpos.rotation);
+            }
+           
+
+        }
+        if (collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            if (!iframes)
+            {
+                ChangeOrcHealth(-1);
+                iframes = true;
+                
             }
 
             if (OrcHealth < 1)
@@ -122,14 +139,11 @@ public class Orc : MonoBehaviour
 
 
         }
-
-
-        void ChangeOrcHealth(int amount)
-        {
-            OrcHealth += amount;
-            Debug.Log("OrcHealth: " + OrcHealth);
-
-        }
+    }
+    void ChangeOrcHealth(int amount)
+    {
+        OrcHealth += amount;
+        Debug.Log("OrcHealth: " + OrcHealth);
 
     }
 }
