@@ -11,11 +11,12 @@ public class PlayerMovementOverworld : MonoBehaviour
     private float YVector;
     private float YDirection;
     public bool Overworld;
+    public GameObject Player1;
     void Start()
     {
         WalkingSpeed = 4f;
+        
     }
-
     // Update is called once per frame
     void Update()
     {

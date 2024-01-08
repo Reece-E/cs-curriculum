@@ -42,6 +42,7 @@ public class Orc : MonoBehaviour
 
 
         }
+      
     }
 
  
@@ -87,65 +88,7 @@ public class Orc : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (!iframes)
-            {
-                ChangeOrcHealth(-1);
-                iframes = true;
-            }
-
-            if (OrcHealth < 1)
-            {
-                Destroy(gameObject);
-                Instantiate(Coin,Orcpos.position, Orcpos.rotation);
-            }
-
-
-        }
-        if (collision.gameObject.CompareTag("Fireball"))
-        {
-            if (!iframes)
-            {
-                ChangeOrcHealth(-1);
-                iframes = true;
-                
-            }
-
-            if (OrcHealth < 1)
-            {
-                Destroy(gameObject);
-                Instantiate(Coin,Orcpos.position, Orcpos.rotation);
-            }
-           
-
-        }
-        if (collision.gameObject.CompareTag("PlayerBullet"))
-        {
-            if (!iframes)
-            {
-                ChangeOrcHealth(-1);
-                iframes = true;
-                
-            }
-
-            if (OrcHealth < 1)
-            {
-                Destroy(gameObject);
-                Instantiate(Coin,Orcpos.position, Orcpos.rotation);
-            }
-
-
-        }
-    }
-    void ChangeOrcHealth(int amount)
-    {
-        OrcHealth += amount;
-        Debug.Log("OrcHealth: " + OrcHealth);
-
-    }
+    
 }
     
 
