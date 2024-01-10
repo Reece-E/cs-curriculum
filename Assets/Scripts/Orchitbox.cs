@@ -54,6 +54,7 @@ public class Orchitbox : MonoBehaviour
                         Destroy(gameObject);
                         Destroy(Orc1);
                         Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        GetComponent<Lootbag>().InstantiateLoot(transform.position);
                     }
     
     
@@ -73,6 +74,7 @@ public class Orchitbox : MonoBehaviour
                         Destroy(gameObject);
                         Destroy(Orc1);
                         Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        GetComponent<Lootbag>().InstantiateLoot(transform.position);
                     }
     
     
@@ -92,6 +94,7 @@ public class Orchitbox : MonoBehaviour
                         Destroy(gameObject);
                         Destroy(Orc1);
                         Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        GetComponent<Lootbag>().InstantiateLoot(transform.position);
                     }
     
                     Destroy(other.gameObject);
