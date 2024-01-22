@@ -12,8 +12,10 @@ public class Orchitbox : MonoBehaviour
     private bool iframes = false;
     private int OrcHealth;
     public GameObject Coin;
+    public GameObject Potion;
     public GameObject Orc1;
     private BoxCollider2D collider;
+    private int Number;
 
     // Start is called before the first frame update
     void Start()
@@ -51,9 +53,19 @@ public class Orchitbox : MonoBehaviour
     
                     if (OrcHealth < 1)
                     {
+                        Number = UnityEngine.Random.Range(1, 3);
+                        Debug.Log("test");
+                        if (Number == 1)
+                        {
+                            Instantiate(Potion, Orcpos.position, Orcpos.rotation);
+                        }
+                        else
+                        {
+                            Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        }
                         Destroy(gameObject);
                         Destroy(Orc1);
-                        Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        //Instantiate(Coin, Orcpos.position, Orcpos.rotation);
                         GetComponent<Lootbag>().InstantiateLoot(transform.position);
                     }
     
@@ -71,10 +83,21 @@ public class Orchitbox : MonoBehaviour
     
                     if (OrcHealth < 1)
                     {
+                        Number = UnityEngine.Random.Range(1, 3);
+                        Debug.Log("test");
+                        if (Number == 1)
+                        {
+                            Instantiate(Potion, Orcpos.position, Orcpos.rotation);
+                        }
+                        else
+                        {
+                            Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        }
+
                         Destroy(gameObject);
                         Destroy(Orc1);
-                        Instantiate(Coin, Orcpos.position, Orcpos.rotation);
-                        GetComponent<Lootbag>().InstantiateLoot(transform.position);
+                        //Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        //GetComponent<Lootbag>().InstantiateLoot(transform.position);
                     }
     
     
@@ -91,9 +114,19 @@ public class Orchitbox : MonoBehaviour
     
                     if (OrcHealth < 1)
                     {
+                        Number = UnityEngine.Random.Range(1, 3);
+                        Debug.Log("test");
+                        if (Number == 1)
+                        {
+                            Instantiate(Potion, Orcpos.position, Orcpos.rotation);
+                        }
+                        else
+                        {
+                            Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        }
                         Destroy(gameObject);
                         Destroy(Orc1);
-                        Instantiate(Coin, Orcpos.position, Orcpos.rotation);
+                        //Instantiate(Coin, Orcpos.position, Orcpos.rotation);
                         GetComponent<Lootbag>().InstantiateLoot(transform.position);
                     }
     

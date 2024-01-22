@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class HealthCode : MonoBehaviour
 {
-    private float iframesTimer;
+    public GameObject invincible;
+    public GameObject canvas;
+    public float iframesTimer;
     private float iframesTimerDefault = 1.5f;
     private bool iframes = false;
     
@@ -113,7 +115,15 @@ public class HealthCode : MonoBehaviour
             iframesTimer = 10f;
             iframes = true;
             Destroy(other.gameObject);
+            BecomeInvincible();
 
         }
+    }
+    void BecomeInvincible()
+    {
+        GameObject newSmoke = Instantiate(invincible, new Vector3(1001, 532, 0), Quaternion.Euler(0, 0, 0)) as GameObject;
+        newSmoke.transform.SetParent(canvas.transform, false);
+        newSmoke.transform.localScale = new Vector3(1, 1, 1);   
+        Debug.Log("script finished");
     }
 }

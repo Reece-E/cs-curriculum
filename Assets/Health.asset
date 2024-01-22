@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8754e62a94f404c6aabd09806c1a195c, type: 3}
   m_Name: Health
   m_EditorClassIdentifier: 
-  lootsprite: {fileID: 0}
-  lootname: 
-  dropchance: 0
+  lootsprite: {fileID: -270498478, guid: 533c2ac25455844abab9f59d1bb39781, type: 3}
+  lootName: Health
+  dropchance: 100

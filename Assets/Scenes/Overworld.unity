@@ -84633,6 +84633,7 @@ GameObject:
   - component: {fileID: 1555020258}
   - component: {fileID: 1555020260}
   - component: {fileID: 1555020259}
+  - component: {fileID: 1555020262}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -84715,6 +84716,23 @@ MonoBehaviour:
   Orcpos: {fileID: 1563504581}
   Coin: {fileID: 480832334}
   Orc1: {fileID: 1563504569}
+--- !u!114 &1555020262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555020257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a4cb1350f8049c38676d982d5e93ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 8633672070450734453, guid: 26e7ce36a094c4c1393091ff48958529,
+    type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 4c2e3abd52acb4814a29dc1d6f9f4df2, type: 2}
+  - {fileID: 11400000, guid: e37cec6fcdcb44a8d8e410f01db17355, type: 2}
 --- !u!1 &1563504569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3736838050167469039, guid: fbdc99957549444bfba281e61d9d218c,
@@ -84743,7 +84761,7 @@ MonoBehaviour:
   Orcpos: {fileID: 1563504581}
   orctarget: {fileID: 1750497393}
   iposition: {fileID: 1662441223}
-  Coin: {fileID: 703228634}
+  Coin: {fileID: 0}
   orcSpeed: 3
 --- !u!58 &1563504583
 CircleCollider2D:

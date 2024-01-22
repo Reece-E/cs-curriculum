@@ -42,9 +42,9 @@ public class Lootbag : MonoBehaviour
             lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootsprite;
 
 
-            //float dropForce = 300f;
-            //Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            //lootGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
+            float dropForce = 25f;
+            Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            lootGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
         }
     }
 }
