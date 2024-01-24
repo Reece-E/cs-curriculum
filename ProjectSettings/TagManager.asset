@@ -12,6 +12,9 @@ TagManager:
   - Wall
   - Fireball
   - IPotion
+  - PlayerBullet
+  - onFloor
+  - Jumping
   layers:
   - Default
   - TransparentFX
