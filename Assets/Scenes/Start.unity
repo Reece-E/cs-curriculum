@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 532849915}
   - component: {fileID: 532849914}
   - component: {fileID: 532849913}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3424,6 +3424,8 @@ MonoBehaviour:
   Overworld: 0
   Player1: {fileID: 1856841597}
   jumpSpeed: 5
+  DeploymentHeight: 1
+  spriteHeight: 1
 --- !u!50 &1856841602 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5564746796056154358, guid: cddc0eae8679c4344b7e477729e7843b,

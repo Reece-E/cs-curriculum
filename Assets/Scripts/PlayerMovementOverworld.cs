@@ -18,6 +18,7 @@ public class PlayerMovementOverworld : MonoBehaviour
     public float jumpSpeed;
     public float DeploymentHeight;
     public float spriteHeight;
+
     void Start()
     {
         WalkingSpeed = 4f;
@@ -40,7 +41,7 @@ public class PlayerMovementOverworld : MonoBehaviour
         else
         {
             
-            //canJump = Physics2D.Raycast(transform.position, Vector2.down, DeploymentHeight);
+            
 
 
             XDirection = Input.GetAxis("Horizontal");
@@ -49,7 +50,7 @@ public class PlayerMovementOverworld : MonoBehaviour
             transform.position = transform.position + new Vector3(XVector, 0, 0);
             
 
-            if ( Input.GetKeyDown(KeyCode.W) && CheckGround())
+            if (canJump && Input.GetKeyDown(KeyCode.W))
             {
 
                 canJump = false;
@@ -64,28 +65,18 @@ public class PlayerMovementOverworld : MonoBehaviour
                 shouldJump = false;
                 //doublejump = true;
             }
-            // else if (doublejump)
-            // {
-            //     doublejump = false;
-            //      rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-            //  }
+            
 
 
 
         }
     }
-    
-    
-
-    private bool CheckGround()
+    private void OnCollisionEnter2D(Collision2D collider)
     {
- 
-        RaycastHit2D hit;
-       
-        hit = Physics2D.Raycast(transform.position, Vector2.down, DeploymentHeight);
-        Debug.DrawRay(transform.position, Vector3.down * DeploymentHeight);
- 
-        return hit;
+        // allow jumping again
+        canJump = true;
+        
+        
     }
 }
 
