@@ -15,6 +15,7 @@ TagManager:
   - PlayerBullet
   - onFloor
   - Jumping
+  - Ladder
   layers:
   - Default
   - TransparentFX

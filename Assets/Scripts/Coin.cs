@@ -6,7 +6,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public HUD hud;
- 
+    public AudioClip coinSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,7 @@ public class Coin : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coin"))
         {
+            AudioSource.PlayClipAtPoint(coinSound, other.transform.position);
             CollectCoin(1);
             Destroy(other.gameObject);
 
