@@ -18,18 +18,30 @@ public class Lever : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D (Collider2D other)
     {
-        if (gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-        
+
             leverStatus = true;
 
             m_Animator.SetBool("Active", true);
         }
+        
+        
+        
+            
+
+
+
     }
 
-    
+    void Update()
+    {
         
-    
+    }
+
+
+
+
 
 }
 
