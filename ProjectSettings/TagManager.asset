@@ -16,6 +16,8 @@ TagManager:
   - onFloor
   - Jumping
   - Ladder
+  - Plat point 1
+  - P1
   layers:
   - Default
   - TransparentFX
